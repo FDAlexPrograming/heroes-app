@@ -1,6 +1,15 @@
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+
+    const navigate = useNavigate();
+
+    const onLogout = () => {
+        navigate('/login', {
+            replace: true
+        });
+    }
+
   return (
     <nav className="navbar navbar-expand bg-dark rounded">
         <div className="container-fluid">
@@ -46,7 +55,10 @@ export const Navbar = () => {
                 <span className="nav-item nav-link text-info text-nowrap">
                     Alex Farias dos Santos
                 </span>
-                <button className="nav-item nav-link btn">
+                <button 
+                    className="nav-item nav-link btn"
+                    onClick={ onLogout }
+                >
                     Logout
                 </button>
             </ul>
