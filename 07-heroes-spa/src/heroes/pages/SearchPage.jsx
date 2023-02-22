@@ -8,8 +8,7 @@ export const SearchPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { q = '' } = queryString.parse( location.search);
-  const heroes = getHeroesByName(q);
-  console.log(heroes);
+  const heroes = getHeroesByName( q );
   const { searchText, onInputChange } = useForm(
     {
       searchText: q

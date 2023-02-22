@@ -7,7 +7,7 @@ export const HeroCard = ( {id, superhero, publisher, alter_ego, first_appearance
   return (
    <div className="col">
       <div className="card bg-dark">
-          <div className="row no-gutters p-3">
+          <div className="row no-gutters p-3 card_heroes">
             <div className="col-4   ">
               <img src={ heroImageUrl } alt={ superhero } className="card-img" />
             </div>
