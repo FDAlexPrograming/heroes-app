@@ -22,13 +22,13 @@ export const HeroPage = () => {
       <img 
         src={ `/assets/heroes/${id}.jpg` }
         alt={ hero.superhero }
-        className="img-thumbnail hero-image"
+        className="img-thumbnail animate__animated animate__zoomInDown"
         />
     </div>
 
-    <div className="col-8">
-      <h3 className="hero-name"> { hero.superhero } </h3>
-      <ul className="list-group hero-info">
+    <div className="col-8 animate__animated  animate__slideInRight">
+      <h3> { hero.superhero } </h3>
+      <ul >
         <li className="list-group-item"> <b> Alter ego:  </b> { hero.alter_ego } </li>
         <li className="list-group-item"> <b> Estudio:  </b> { hero.publisher } </li>
         <li className="list-group-item"> <b> Primera aparición:  </b> { hero.first_appearance } </li>
