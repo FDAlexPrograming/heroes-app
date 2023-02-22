@@ -1,8 +1,9 @@
 * {
-    color: #d6d4d4 !important;
+   
     font-family: 'Montserrat', sans-serif;
 }
 body {
+    color: #d6d4d4 ;
     padding: 20px;
     background:rgb(15 8 18 );
 }

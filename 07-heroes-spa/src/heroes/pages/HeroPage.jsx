@@ -26,9 +26,9 @@ export const HeroPage = () => {
         />
     </div>
 
-    <div className="col-8 animate__animated  animate__slideInRight">
+    <div className="col-8">
       <h3> { hero.superhero } </h3>
-      <ul >
+      <ul className="hero-name">
         <li className="list-group-item"> <b> Alter ego:  </b> { hero.alter_ego } </li>
         <li className="list-group-item"> <b> Estudio:  </b> { hero.publisher } </li>
         <li className="list-group-item"> <b> Primera aparición:  </b> { hero.first_appearance } </li>
