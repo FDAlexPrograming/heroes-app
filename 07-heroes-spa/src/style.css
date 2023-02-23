@@ -113,3 +113,7 @@ li {
     min-width: 14rem
 
   }
+
+  ul button {
+    color: #cab9b9 !important;
+  }

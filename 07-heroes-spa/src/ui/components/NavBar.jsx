@@ -57,7 +57,7 @@ export const Navbar = () => {
             </div>
         </div>
         <div>
-            <ul className="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto col-12">
                 <span className="nav-item nav-link text-info text-nowrap">
                  {  user?.name}
                 </span>
@@ -65,7 +65,7 @@ export const Navbar = () => {
                     className="nav-item nav-link btn"
                     onClick={ onLogout }
                 >
-                    Logout
+                | Logout
                 </button>
             </ul>
         </div>
