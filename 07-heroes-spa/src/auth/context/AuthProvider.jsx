@@ -13,22 +13,28 @@ const init = () => {
 
 export const AuthProvider = ({ children }) => {
 
-   const [ state, dispatch ] = useReducer( authReducer, {}, init );
-
-   const login = async( name = '' ) => {
-    const user = { id: 'ABC', name }
-    const action = {
-        type:types.login,
-        payload: user
+    const [ state, dispatch ] = useReducer( authReducer, {}, init );
+    
+    const login = async( name = '' ) => {
+        const user = { id: 'ABC', name }
+        const action = { type:types.login, payload: user }
+        localStorage.setItem('user', JSON.stringify( user ) );
+        dispatch( action) ;
     }
-    localStorage.setItem('user', JSON.stringify( user ) );
-    dispatch( action) ;
-   }
+
+    const logout = () => {
+        localStorage.removeItem('user');
+        const action = { type: types.logout };
+        dispatch( action );
+    }
 
     return (
         <AuthContext.Provider value={{ 
             ...state,
-            login:login
+
+            // methods
+            login,
+            logout,
         }}>
             { children }
         </AuthContext.Provider>

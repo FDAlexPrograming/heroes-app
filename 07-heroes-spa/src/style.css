@@ -10,7 +10,13 @@ body {
 nav{
     max-height: 3.5rem;
 }
+.collapse ul {
+  margin-left: 3rem;
+}
 
+.ml-auto{
+  margin-right: 4rem;
+}
 .link-info {
     position: absolute;
     bottom: 10px;
