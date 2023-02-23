@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
         const user = { id: 'ABC', name }
         const action = { type:types.login, payload: user }
         localStorage.setItem('user', JSON.stringify( user ) );
-        dispatch( action) ;
+        dispatch( action ) ;
     }
 
     const logout = () => {
